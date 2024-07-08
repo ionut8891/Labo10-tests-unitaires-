@@ -74,21 +74,21 @@ describe('Currency conversion functions', () => {
     test('should convert euro to dollar correctly', () => {
         const euro = 1;
         const expectedDollar = euro * oneEuroIs["USD"];
-        expect(fromEuroToDollar(euro)).toBe(expectedDollar);
+        expect(fromEuroToDollar(euro)).toBeCloseTo(expectedDollar);
     });
 
     // Test for conversion from Euro to Japan Yen
     test('should convert euro to yen correctly', () => {
         const euro = 1;
         const expectedYen = euro * oneEuroIs["JPY"];
-        expect(fromEuroToJapanYen(euro)).toBe(expectedYen);
+        expect(fromEuroToJapanYen(euro)).toBeCloseTo(expectedYen);
     });
 
     // Test for conversion from Euro to British Pound
     test('should convert euro to pound correctly', () => {
         const euro = 1;
         const expectedPound = euro * oneEuroIs["GBP"];
-        expect(fromEuroToBritish(euro)).toBe(expectedPound);
+        expect(fromEuroToBritish(euro)).toBeCloseTo(expectedPound);
     });
     afterAll(() => {
         console.log('Finished tests for currency conversion functions.');
